@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsibility Game</title>
+    <link rel="icon" href="responsibilityicon.png">
+</head>
+<style>
+</style>
+<body style="text-align: center; background-color: wheat;">
+    <h1 style="font-size: 60px; color: blue;">Responsibility Game</h1>
+    <div id="gameArea" style="position: absolute; left: 50%; margin-left: -300px; width: 600px; height: 600px; background-color: lightblue; background-size: 600px 500px; background-repeat: no-repeat; display: grid;">
+        <h1 id="slideText" style="font-size: 50px; margin: auto; margin-bottom: 50px; font-family:Arial, Helvetica, sans-serif; color: darkblue;" hidden></h1>
+        <button id="continueButton" style="margin: auto; margin-top: -50px; font-size: 50px; color: blue;" hidden>Start</button>
+        <label id="chooseCharacter" style="margin: auto; margin-bottom: 50px; font-size: 50px; color: darkblue;">Choose your character</label>
+        <label id="slideResultText" style="z-index: 1; font-size: 130px; font-family:Arial, Helvetica, sans-serif;" hidden></label>
+        <div id="characters" style="margin: auto; margin-top: -50px; background-color: white; width: 60%; height: 130px;">
+            <img id="Mirabel" src="mirabel.png" width="60" height="130" onclick="selectCharacter(this)" style="--parent:mom; --parentName:Abuela; --parentPronoun:she; --friend:Dolores; --cousin1:Antonio; --cousin2:Camilo; --teacher:Pepa;">
+            <img id="Abuela" src="abuela.png" width="60" height="130" hidden>
+            <img id="Dolores" src="dolores.webp" width="60" height="130" onclick="selectCharacter(this)" style="--parent:dad; --parentName:Felix; --parentPronoun:he; --friend:Mirabel; --cousin1:Camilo; --cousin2:Antonio; --teacher:Pepa;">
+            <img id="Antonio" src="antonio.png" width="60" height="130" onclick="selectCharacter(this)" style="--parent:dad; --parentName:Felix; --parentPronoun:he; --friend:Camilo; --cousin1:Mirabel; --cousin2:Dolores; --teacher:Pepa;">
+            <img id="Camilo" src="camilo.webp" width="60" height="130" onclick="selectCharacter(this)" style="--parent:dad; --parentName:Felix; --parentPronoun:he; --friend:Antonio; --cousin1:Dolores; --cousin2:Mirabel; --teacher:Pepa;">
+            <img id="Felix" src="felix.png" width="60" height="130" hidden>
+            <img id="Pepa" src="pepa.png" width="60" height="130" hidden>
+        </div>
+        <div id="characterWordsBox" style="overflow: auto; font-size: 30px; position: absolute; width: 97%; height: 82px; background-color: white; margin: 1.5%" hidden></div>
+        <img id="milk" src="milk.png" width="300" height="150" style="position: absolute; top: 50%; left: 50%; transform: translate(-70%, 10%)" hidden>
+        <img id="cookies" src="cookies.png" width="50" height="50" style="position: absolute; top: 50%; left: 50%; transform: translate(-130%, -130%)" hidden>
+    </div>
+    <script src="responsibility.js"></script>
+</body>
+</html>
